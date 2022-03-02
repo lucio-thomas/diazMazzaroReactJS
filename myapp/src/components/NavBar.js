@@ -9,6 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from './CartWidget'
+//import { useNavigate } from 'react-router-dom';
+
 
 const pages = ['Productos', 'Contacto', 'Nosotros'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -28,6 +31,14 @@ const NavBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  //const history = useNavigate();
+
+    function goToProds(e) {
+      //e.preventDefault();
+      //history('/productos');
+      console.log('Bienvenido a Productos');
+    }
 
   return(
     <div>
@@ -80,19 +91,12 @@ const NavBar = () => {
                   ))}
                 </Menu>
               </Box>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-              >
-                LOGO
-              </Typography>
+              
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    onClick={handleCloseNavMenu}
+                    onClick={goToProds}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     {page}
@@ -124,6 +128,7 @@ const NavBar = () => {
                   ))}
                 </Menu>
               </Box>
+              <CartWidget style={{paddingLeft: 10,}} />
             </Toolbar>
           </Container>
         </AppBar>
