@@ -51,7 +51,7 @@ const ItemCounter = () =>{
             />
 
             <div >
-                <p style={{}}>Current Count: {counter} </p>
+                <p style={{}}>Cantidad de productos: {counter} </p>
             </div>
 
         </div>
