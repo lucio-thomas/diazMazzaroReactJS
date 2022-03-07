@@ -26,7 +26,11 @@ const ItemCounter = () =>{
                 onClick={() => {
                     //Dont do this
                     //counter++
-                    setCounter(counter +1)
+                    if (counter > 14){
+                        return false
+                    }else{
+                        setCounter(counter +1)
+                    } 
                 }}
                 style={{ border: 'solid 3px white', borderRadius: '4px', marginRight:'15px'}}
             />
@@ -45,7 +49,11 @@ const ItemCounter = () =>{
                 onClick={() => {
                     //Dont do this
                     //counter--
-                    setCounter(counter -1)
+                    if (counter < 1){
+                        return false
+                    }else {
+                        setCounter(counter -1)
+                    }
                 }}
                 style={{ border: 'solid 3px white', borderRadius: '4px'}}
             />
@@ -60,3 +68,9 @@ const ItemCounter = () =>{
 
 
 export default ItemCounter;
+
+
+// Requerimientos reentrtega desafio:
+// te olvidaste de que debias setearle un stock para que el contador no pasase de ese numero, y deberias agregarle tambien la logica para que no baje de 0 a numeros negativos. 
+// Tambien una funcion onAdd que le pasaras por prop desde su padre (ItemListContainer) que lo que hará será tomar el valor de counter y mostrarlo en un console log o en una 
+// alert!. 
