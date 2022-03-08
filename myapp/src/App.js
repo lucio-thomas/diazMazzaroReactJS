@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './screens/ItemListContainer'
-import ItemCounter from './components/ItemCounter';
+import Spacer from './components/Spacer'
 //import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom';
 
 
@@ -18,9 +18,9 @@ function App() {
         </nav>
       </header>
       <main className="App-header" style ={{marginTop: -800}}>
-        <ItemListContainer/>
-
-        <ItemCounter/>
+        <Spacer>
+          <ItemListContainer/>
+        </Spacer>
       </main>
     </div>
   );
