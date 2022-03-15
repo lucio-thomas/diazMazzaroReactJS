@@ -2,7 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './screens/ItemListContainer'
+<<<<<<< HEAD
 import Spacer from './components/Spacer'
+=======
+// import ItemCounter from './components/ItemCounter';
+>>>>>>> counterOne
 //import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom';
 
 
@@ -18,9 +22,15 @@ function App() {
         </nav>
       </header>
       <main className="App-header" style ={{marginTop: -800}}>
+<<<<<<< HEAD
         <Spacer>
           <ItemListContainer/>
         </Spacer>
+=======
+        <ItemListContainer/>
+
+        {/* <ItemCounter/> */}
+>>>>>>> counterOne
       </main>
     </div>
   );

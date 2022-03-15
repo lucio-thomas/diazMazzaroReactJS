@@ -3,7 +3,11 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import Button from '@mui/material/Button';
 
+<<<<<<< HEAD
 const ItemCounter = ({}) =>{
+=======
+const ItemCounter = () =>{
+>>>>>>> counterOne
     const [counter,setCounter] = useState(0)
 
     const onAdd  = () => {
@@ -12,7 +16,10 @@ const ItemCounter = ({}) =>{
 
     return(
         <div>
+<<<<<<< HEAD
             <p>{counter}</p>
+=======
+>>>>>>> counterOne
 
             {/*<Button
                title='Increase'
@@ -61,9 +68,17 @@ const ItemCounter = ({}) =>{
                 }}
                 style={{ border: 'solid 3px white', borderRadius: '4px', fontSize: 25 }}
             />
+<<<<<<< HEAD
             <br/>
             <Button variant="contained" onClick={() => onAdd()}>Añadir al carrito</Button>
 
+=======
+
+            <div >
+                <p style={{}}>Cantidad de productos: {counter} </p>
+            </div>
+            
+>>>>>>> counterOne
         </div>
     )
 }

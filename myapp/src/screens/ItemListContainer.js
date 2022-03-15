@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import ItemCounter from '../components/ItemCounter';
 
 const ItemListContainer = ({counter}) => {
@@ -35,7 +36,30 @@ const ItemListContainer = ({counter}) => {
 
             </ul>
         </div>
+=======
+import ItemList from './ItemList';
+
+function ItemListContainer(){
+    return(
+        <ItemList/>
+>>>>>>> counterOne
     )
 }
 
 export default ItemListContainer;
+
+// const showProducts = ()=>{
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             let productos = <ItemList/>;
+//             resolve(productos)
+//         }, 2000)
+//     })
+// }
+
+
+// const ItemListContainer = async () => {
+// await showProducts().then((productos)=>{
+//     return productos
+// })
+// }
