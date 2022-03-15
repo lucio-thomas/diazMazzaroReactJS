@@ -1,17 +1,26 @@
 import React from 'react';
+import ItemList from './ItemList';
 
-const ItemListContainer = () => {
+function ItemListContainer(){
     return(
-        <div >
-            <ul>
-                <li>Producto 1</li>
-                <li>Producto 2</li>
-                <li>Producto 3</li>
-                <li>Producto 4</li>
-                <li>Producto 5</li>
-            </ul>
-        </div>
+        <ItemList/>
     )
 }
 
 export default ItemListContainer;
+
+// const showProducts = ()=>{
+//     return new Promise((resolve, reject)=>{
+//         setTimeout(()=>{
+//             let productos = <ItemList/>;
+//             resolve(productos)
+//         }, 2000)
+//     })
+// }
+
+
+// const ItemListContainer = async () => {
+// await showProducts().then((productos)=>{
+//     return productos
+// })
+// }

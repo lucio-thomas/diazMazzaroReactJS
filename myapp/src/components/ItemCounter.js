@@ -3,13 +3,10 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 
 const ItemCounter = () =>{
-    const greeting = 'Hola!'
     const [counter,setCounter] = useState(0)
 
     return(
         <div>
-            <h2>{greeting}</h2>
-            <p >Este es el contador </p>
 
             {/*<Button
                title='Increase'
@@ -61,7 +58,7 @@ const ItemCounter = () =>{
             <div >
                 <p style={{}}>Cantidad de productos: {counter} </p>
             </div>
-
+            
         </div>
     )
 }
