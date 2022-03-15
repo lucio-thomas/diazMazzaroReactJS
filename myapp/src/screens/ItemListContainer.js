@@ -2,9 +2,9 @@ import React from 'react';
 import ItemList from './ItemList';
 
 function ItemListContainer(){
-    return(
-        <ItemList/>
-    )
+    setTimeout(()=>{
+        return(<ItemList/>)
+    }, 2000)
 }
 
 export default ItemListContainer;
