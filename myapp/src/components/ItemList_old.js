@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
-import {Items} from '../components/Item';
-import ItemCounter from '../components/ItemCounter';
+import {Items} from './Item';
+import ItemCounter from './ItemCounter';
 
 const items = Items;
 

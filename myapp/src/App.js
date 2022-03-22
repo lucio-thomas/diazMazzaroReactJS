@@ -1,39 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './screens/ItemListContainer'
+import ItemListContainer from './components/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 // import ItemCounter from './components/ItemCounter';
 //import { Routes, Route, Link, Outlet, useNavigate } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="App-logoContainer">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        <nav style={{display: 'flex', flexDirection: 'row'}}>
-          <NavBar/>
-        </nav>
-      </header>
-      <main className="App-header" style ={{marginTop: -800}}>
-        <ItemListContainer/>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          <div className="App-logoContainer">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
+          <nav style={{display: 'flex', flexDirection: 'row'}}>
+            <NavBar/>
+          </nav>
+        </header>
+        <main className="App-header" style ={{marginTop: -800}}>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/productos/:category" element={<ItemListContainer />} />
+          <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+        </Routes>
 
-        {/* <ItemCounter/> */}
-      </main>
-    </div>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
 
-
-
-
-        // <Routes>
-        //   <Route path="/" element={<Layout />}>
-        //     <Route  index element={<LogIn  />} />
-        //     <Route path="/reportes" element={<Reportes />} />
-        //   </Route>
-        // </Routes>
+    // <BrowserRouter>
+    //   <Navbar />
+    //   <Routes>
+    //     <Route path="/" element={<ItemListContainer />} />
+    //     <Route path="/productos/:category" element={<ItemListContainer />} />
+    //     <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
+    //   </Routes>
+    // </BrowserRouter>

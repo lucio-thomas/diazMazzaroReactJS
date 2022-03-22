@@ -1,18 +1,30 @@
-export const Items = 
-        [
-            {
-                "id": 60,
-                "title":"Teclado Redragon K530 Draconic",
-                "price":"AR$ 8000",
-                "pictureURL":"https://m.media-amazon.com/images/I/61IhHiYBiyL._AC_SY355_.jpg"
-            },
-            // {
-            //     "id": 71,
-            //     "title":"Hyperx Cloud Stinger Wireless 7.1",
-            //     "price":"AR$ 10000",
-            //     "pictureURL":"https://media.kingston.com/hyperx/product/hx-product-headset-stinger-wireless-pc-2-zm-lg.jpg"
-            // }
+import React from "react";
+import { Link } from "react-router-dom";
 
-        ]
+const Item = ({ id, name, description, price, stock, imgUrl, category }) => {
+  return (
+    <div className="wrapper">
+      <div className="container">
+        <div
+          className="top"
+          style={{ backgroundImage: `url("${imgUrl}")` }}
+        ></div>
+        <div className="bottom">
+          <div className="left">
+            <div className="details">
+              <h3>{name}</h3>
+              <p>${price}</p>
+            </div>
+            <Link to={`/detail/${id}`} className="buy">
+              Mas Detalles
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
- 
+export default Item;  
+        
+        

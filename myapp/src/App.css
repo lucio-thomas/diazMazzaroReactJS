@@ -44,3 +44,13 @@
 .productContainer{
   border: solid 2px #000;
 }
+
+.noDecoLink{
+  text-decoration: none;
+  color: white;
+}
+.noDecoLinkBold{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
