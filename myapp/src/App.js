@@ -24,7 +24,7 @@ function App() {
         <main className="App-header" style ={{marginTop: -800}}>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/productos/:category" element={<ItemListContainer />} />
+          <Route path="/productos/:categoryId" element={<ItemListContainer />} />
           <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
         </Routes>
 

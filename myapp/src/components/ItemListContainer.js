@@ -51,7 +51,7 @@ const ItemListContainer = () => {
     } else {
       getProductos.then((res) => {
         setProductos(
-          res.filter((productos) => productos.categoryIdId === categoryId)
+          res.filter((productos) => productos.categoryId === categoryId)
         );
       });
     }
