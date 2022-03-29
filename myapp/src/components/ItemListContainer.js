@@ -3,6 +3,17 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 
 
+export const estilosItemListContainer = {
+  width: "100%",
+  height: "auto",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent:"flex-start",
+  alignItems: "center",
+  // background: "#e4e6ed",
+  padding: "10px 0"
+}
+
 const ItemListContainer = () => {
   const { categoryId } = useParams();
   console.log(categoryId);
@@ -58,7 +69,8 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div>
+    <div style={estilosItemListContainer}>
+      {/* <p style={{marginTop: 50}}>Item list container</p> */}
       <ItemList productos={productos} />
     </div>
   );
